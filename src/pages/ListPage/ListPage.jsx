@@ -13,6 +13,9 @@ const ListPage = () => {
     // TODO: запросы к серверу по всем imdbID
   }, []);
 
+
+  
+
   return (
     <div className="list-page">
       <h1 className="list-page__title">Мой список</h1>
