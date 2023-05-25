@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./SearchBox.css";
+import { useDispatch } from "react-redux";
+import { getFilms } from "../../state/actions";
 
 const SearchBox = () => {
   const [state, setState] = useState({
     searchLine: "",
   });
 
+  const dispatch = useDispatch();
+
   const searchLineChangeHandler = (e) => {
-    this.setState({ searchLine: e.target.value });
+    setState({ ...state, searchLine: e.target.value });
   };
   const searchBoxSubmitHandler = (e) => {
     e.preventDefault();
+    dispatch(getFilms(state.searchLine));
   };
 
   const { searchLine } = state;

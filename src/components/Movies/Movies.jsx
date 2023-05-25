@@ -1,38 +1,32 @@
-import React, { useState } from 'react';
-import MovieItem from '../MovieItem/MovieItem';
-import './Movies.css';
+import { useEffect, useState } from "react";
+import MovieItem from "../MovieItem/MovieItem";
+import "./Movies.css";
+import { useDispatch, useSelector } from "react-redux";
+import { getFilms } from "../../state/actions";
 
-const Movies =()=>{
-  
-    const [state,setState]=useState({
-      movies: [
-        {
-          imdbID: "tt3896198",
-          title: "Guardians of the Galaxy Vol. 2",
-          year: 2017,
-          poster:
-            "https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_SX300.jpg",
-        },
-        {
-          imdbID: "tt0068646",
-          title: "The Godfather",
-          year: 1972,
-          poster:
-            "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg",
-        },
-      ],
-    });
-   
-        return ( 
-            <ul className="movies">
-                {state.movies.map((movie) => (
-                    <li className="movies__item" key={movie.imdbID}>
-                        <MovieItem {...movie} />
-                    </li>
-                ))}
-            </ul>
-        );
+const Movies = () => {
+  const { data, loading, error } = useSelector((state) => state.films);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getFilms());
+  }, [dispatch]);
 
-}
- 
+  if (loading) {
+    return <>LOADINg....</>;
+  }
+  if (error) {
+    return <>{error}</>;
+  }
+
+  return (
+    <ul className="movies">
+      {data?.map((movie) => (
+        <li className="movies__item" key={movie.imdbID}>
+          <MovieItem {...movie} />
+        </li>
+      ))}
+    </ul>
+  );
+};
+
 export default Movies;
