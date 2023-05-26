@@ -12,9 +12,12 @@ const App = () => {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/list/:id" element={<ListPage />} />
+        {/* <Route path="/components/Header/Splide.jsx" element={<Splide/>}/> */}
       </Routes>
     </div>
   );
 };
+
+
 
 export default App;
