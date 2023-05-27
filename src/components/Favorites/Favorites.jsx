@@ -73,8 +73,8 @@ const Favorites = () => {
                       >
                         {item.listName}
                       </Link>
-                      <button onClick={() => handleDeleteList(item.listName)}>
-                        del
+                      <button className="delBtn" onClick={() => handleDeleteList(item.listName)}>
+                        X
                       </button>
                     </React.Fragment>
                   );

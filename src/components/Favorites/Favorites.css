@@ -31,3 +31,21 @@
     opacity: 0.9;
     transition: all 0.2s linear;
 }
+.delBtn{
+    width: 30px;
+    height: 20px;
+    border-radius: 45px;
+    margin: 20px;
+    color: azure;
+    background-color: steelblue;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    
+}
+.delBtn:hover{
+    background-color: brown ;
+}
+.favorites__delete{
+    background-color: aqua;
+}
