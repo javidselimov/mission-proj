@@ -49,3 +49,23 @@
 .favorites__delete{
     background-color: aqua;
 }
+
+.remove{
+    background-color: cadetblue;
+    color: aliceblue;
+    width: 80px;
+    height: 20px;
+    margin: 5px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+.remove:hover{
+    background-color: brown;
+}
+.favorites__save{
+    margin-right: 30px;
+    display: flex;
+}

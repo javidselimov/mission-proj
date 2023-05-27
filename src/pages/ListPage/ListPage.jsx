@@ -17,10 +17,11 @@ const ListPage = () => {
         {list.find(item=>item.listName===params.id).data.map((item) => {
           return (
             <li key={item.imdbID}>
-              <a  className="a" href={`https://www.imdb.com/title/${item.imdbID}/`} target="_blank">
+              Movie:<a  className="a" href={`https://www.imdb.com/title/${item.imdbID}/`} target="_blank">
                 {/* {item.Title} ({item.Year}) */}
-              <p className="p" > Movie: {item.Title}   {item.Year} {}
+              <p className="p" >  {item.Title}   {item.Year} 
                 </p></a>
+                {/* <img src={Poster} alt=" " /> */}
             </li>
           );
         })}
