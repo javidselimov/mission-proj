@@ -2,6 +2,7 @@
     padding: 42px calc(50% - 500px);
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .main-page__main-section {
