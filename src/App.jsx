@@ -5,6 +5,7 @@ import ListPage from "./pages/ListPage/ListPage";
 
 import "./reset.css";
 import "./common.css";
+import Splide from "./components/splide/Splide";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/list/:id" element={<ListPage />} />
         {/* <Route path="/components/Header/Splide.jsx" element={<Splide/>}/> */}
       </Routes>
+      
     </div>
   );
 };
