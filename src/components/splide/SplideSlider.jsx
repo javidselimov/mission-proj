@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Splide as ReactSplide, Splide } from '@splidejs/react-splide';
+import { Splide as ReactSplide, Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getFilms } from '../../state/actions';
@@ -35,9 +35,10 @@ const SplideSlider = () => {
       ref={splideRef}
     >
       {data?.map((movie) => (
-        <Splide key={movie.imdbID}>
-          <img className='poster-image' src={movie.Poster} alt={movie.title} />
-        </Splide>
+        <SplideSlide key={movie.imdbID}>
+          <li><img className='poster-image' src={movie.Poster} alt={movie.title} /></li>
+          {/* <li><img className='poster-image' src={movie.Poster} alt={movie.title} /></li> */}
+        </SplideSlide>
       ))}
     </Splide>
   );

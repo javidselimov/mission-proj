@@ -5,7 +5,7 @@ import ListPage from "./pages/ListPage/ListPage";
 
 import "./reset.css";
 import "./common.css";
-import Splide from "./components/splide/Splide";
+import Splide from "./components/splide/SplideSlider";
 
 const App = () => {
   return (
