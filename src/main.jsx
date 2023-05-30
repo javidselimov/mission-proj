@@ -8,7 +8,10 @@ import { store } from "./state/store.js";
 ReactDOM.createRoot(document.getElementById("root")).render(
  
     <BrowserRouter>
-      <App />
+    <Provider  store={store}>
+    <App />
+    </Provider>
+    
     </BrowserRouter>
  
 );
