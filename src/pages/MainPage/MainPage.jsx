@@ -4,16 +4,21 @@ import Header from '../../components/Header/Header';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import Movies from '../../components/Movies/Movies';
 import Favorites from '../../components/Favorites/Favorites';
+import Splide from '../../components/splide/SplideSlider'
 
 const  MainPage =()=> {
   
         return (
             <div className="main-page">
                 <Header />
+              
                 <main className="main-page__content">
                     <section className="main-page__main-section">
                         <div className="main-page__search-box">
                             <SearchBox />
+                        </div>
+                        <div className='main-page__splide'>
+                        <Splide/>
                         </div>
                         <div className="main-page__movies">
                             <Movies />

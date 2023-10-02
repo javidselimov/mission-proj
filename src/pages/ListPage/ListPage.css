@@ -10,3 +10,28 @@
 .list-page ul li {
     font-size: 18px;
 }
+
+.list-page{
+    background-color: antiquewhite;
+    width: 100%;
+    height: 500px;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+
+}
+.a{
+    margin: 10px;
+    padding: 10px;
+}
+.p{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    border:1px solid gray;
+    height: auto;
+    width: auto;
+}

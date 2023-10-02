@@ -52,14 +52,14 @@ const Favorites = () => {
           return (
             <li key={item.imdbID}>
               {item.Title} ({item.Year})
-              <button onClick={() => handleRemoveData(item.imdbID)}>
+              <button className="remove" onClick={() => handleRemoveData(item.imdbID)}>
                 remove
               </button>
             </li>
           );
         })}
       </ul>
-      <button type="button" onClick={handleClick} disabled={state.listName?false:true} className="favorites__save">
+      <button   type="button" onClick={handleClick} disabled={state.listName?false:true} className="favorites__save">
         Сохранить список
           </button>
           
@@ -73,8 +73,8 @@ const Favorites = () => {
                       >
                         {item.listName}
                       </Link>
-                      <button onClick={() => handleDeleteList(item.listName)}>
-                        del
+                      <button className="delBtn" onClick={() => handleDeleteList(item.listName)}>
+                        X
                       </button>
                     </React.Fragment>
                   );
